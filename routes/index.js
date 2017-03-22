@@ -18,11 +18,11 @@ router.post("/metadata", upload.single('uploadedFile'), function (req, res, next
       size: req.file.size
     };
 
-	  // Delete file
-	  fs.unlink(req.file.path, function(err) {
-	    if (err) return console.error(err);
-	    console.log("File deleted successfully!");
-	  }); 
+	  // // Delete file
+	  // fs.unlink(req.file.path, function(err) {
+	  //   if (err) return console.error(err);
+	  //   console.log("File deleted successfully!");
+	  // }); 
 
 	  return res.json(fileMetadata);   
   } 
